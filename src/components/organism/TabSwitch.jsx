@@ -5,7 +5,7 @@ import Switch3 from '../../assets/images/switch3.svg';
 import Icon1 from '../../assets/icons/switch1.svg';
 import Icon2 from '../../assets/icons/switch2.svg';
 import Icon3 from '../../assets/icons/switch3.svg';
-
+import Rounded from '../../assets/images/rounded.svg';
 const TabSwitch = () => {
   const [switchImage, setSwitchImage] = useState(Switch1);
   const [percentage, setPercentage] = useState(0);
@@ -66,8 +66,9 @@ const TabSwitch = () => {
             </div>
           </div>
         </div>
-        <div>
-          <img src={switchImage} alt={switchImage} className='duration-300 rounded-3xl ease-in-out z-10'/>
+        <div className='relative'>
+          <img src={Rounded} className='absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px]' alt="" />
+          <img src={switchImage} alt={switchImage} className='duration-300 rounded-3xl ease-in-out z-10' />
         </div>
       </div>
     </div>
