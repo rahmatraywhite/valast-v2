@@ -77,8 +77,7 @@ export default function Navbar() {
                                 <Link to={"/"}>Kontak</Link>
                             </li>
                         </ul>
-
-                        <div className="mt-3 flex flex-col gap-3 lg:hidden lg:inline-block">
+                        <div className="mt-3 flex flex-col gap-3 lg:hidden">
                             <Link>
                                 <Button className={"text-sm w-full bg-[#fff] border border-[#EAECF0] font-medium text-primary"}>Masuk</Button>
                             </Link>
