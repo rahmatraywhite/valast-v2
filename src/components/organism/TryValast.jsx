@@ -16,7 +16,8 @@ const TryValast = () => {
         style={{
           background:
             'linear-gradient(180deg, rgba(60, 128, 242, 0.08) 27.24%, rgba(60, 128, 242, 0.00) 100%)',
-        }}>
+        }}
+        className="">
         <div className="flex flex-col md:flex-row justify-center items-center py-5 px-4 lg:px-8">
           <div data-aos="fade-right" className="text-center lg:text-left">
             <p className="text-[#1D2939] font-extrabold text-[28px] lg:text-[38px] leading-[36px] lg:leading-[52px]">
@@ -40,7 +41,7 @@ const TryValast = () => {
           />
         </div>
       </div>
-      <div className=" relative ">
+      <div className=" relative mt-6">
         <div
           data-aos="fade-up"
           className="max-w-7xl p-8 bg-[#3C80F2] mx-auto rounded-2xl flex flex-col lg:flex-row items-center justify-center lg:justify-between">
