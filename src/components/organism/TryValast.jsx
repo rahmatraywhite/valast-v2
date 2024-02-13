@@ -17,7 +17,7 @@ const TryValast = () => {
           background:
             'linear-gradient(180deg, rgba(60, 128, 242, 0.08) 27.24%, rgba(60, 128, 242, 0.00) 100%)',
         }}>
-        <div className="flex flex-col md:flex-row justify-between items-center py-5 px-4 lg:px-8">
+        <div className="flex flex-col max-w-7xl mx-auto md:flex-row justify-between items-center py-5 px-4 lg:px-8">
           <div
             data-aos="fade-right"
             className="text-center max-w-[617px] lg:text-left">
