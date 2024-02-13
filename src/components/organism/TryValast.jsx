@@ -25,7 +25,7 @@ const TryValast = () => {
               Kamu Mempunyai Kesulitan Saat Menggunakan Valast?
             </p>
             <p className="text-[#475467] mt-4 text-lg lg:text-xl leading-6">
-              Dapatkan Informasi lebih lengap tentang Valast
+              Dapatkan Informasi lebih lengkap tentang Valast
             </p>
             <div className="flex flex-col lg:flex-row items-center mt-8 gap-3">
               <Button className="bg-[#3C80F2] text-white">Jalankan Demo</Button>
