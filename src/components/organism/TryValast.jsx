@@ -16,10 +16,11 @@ const TryValast = () => {
         style={{
           background:
             'linear-gradient(180deg, rgba(60, 128, 242, 0.08) 27.24%, rgba(60, 128, 242, 0.00) 100%)',
-        }}
-        className="">
-        <div className="flex flex-col md:flex-row justify-center items-center py-5 px-4 lg:px-8">
-          <div data-aos="fade-right" className="text-center lg:text-left">
+        }}>
+        <div className="flex flex-col md:flex-row justify-between items-center py-5 px-4 lg:px-8">
+          <div
+            data-aos="fade-right"
+            className="text-center max-w-[617px] lg:text-left">
             <p className="text-[#1D2939] font-extrabold text-[28px] lg:text-[38px] leading-[36px] lg:leading-[52px]">
               Kamu Mempunyai Kesulitan Saat Menggunakan Valast?
             </p>
