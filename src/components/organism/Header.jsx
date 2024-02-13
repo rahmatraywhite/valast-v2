@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '../atoms/Button';
 import HeaderImg from '../../assets/images/header right.png';
 import HeaderLeft from '../../assets/images/header left.svg';
+import Aos from 'aos';
 
 const Header = () => {
+  useEffect(() => {
+    Aos.init();
+  });
   return (
-    <div className="w-full py-8 md:py-[60px] bg-[#EFEFEF] md:px-2">
+    <div className="w-full py-8 md:py-[60px] bg-[#F9F9F9] md:px-2">
       <img src={HeaderLeft} className="absolute" alt="header Valast ID" />
       <div className="flex mt-3 md:my-[30px] max-w-7xl mx-auto justify-center md:justify-between p-3 md:p-0 flex-col md:flex-row md:items-center">
-        <div className="w-full md:w-1/2 flex flex-col justify-center md:mr-5">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          className="w-full md:w-1/2 flex flex-col justify-center md:mr-5">
           <h1 className="text-[#1D2939] font-extrabold leading-8 md:leading-[64px] text-2xl md:text-[45px]">
             Aplikasi Money Changer Online Lengkap Untuk Mempercepat Bisnis Anda
           </h1>
@@ -27,7 +34,13 @@ const Header = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center mt-6 md:justify-end md:mt-0">
-          <img src={HeaderImg} className="w-full md:w-auto" alt="Valast ID" />
+          <img
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            src={HeaderImg}
+            className="w-full md:w-auto"
+            alt="Valast ID"
+          />
         </div>
       </div>
     </div>

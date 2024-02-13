@@ -1,11 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Button from '../atoms/Button';
 import Custry from '../../assets/images/custry.png';
 import Valas2 from '../../assets/icons/valas2.svg';
 import HeaderRight from '../../assets/images/header right.png';
 import HeaderLeft from '../../assets/images/melengkung.svg';
+import Aos from 'aos';
 
 const TryValast = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  });
   return (
     <Fragment>
       <div
@@ -14,7 +18,7 @@ const TryValast = () => {
             'linear-gradient(180deg, rgba(60, 128, 242, 0.08) 27.24%, rgba(60, 128, 242, 0.00) 100%)',
         }}>
         <div className="flex flex-col md:flex-row justify-center items-center py-5 px-4 lg:px-8">
-          <div className="text-center lg:text-left">
+          <div data-aos="fade-right" className="text-center lg:text-left">
             <p className="text-[#1D2939] font-extrabold text-[28px] lg:text-[38px] leading-[36px] lg:leading-[52px]">
               Kamu Mempunyai Kesulitan Saat Menggunakan Valast?
             </p>
@@ -29,6 +33,7 @@ const TryValast = () => {
             </div>
           </div>
           <img
+            data-aos="fade-left"
             src={Custry}
             alt="Coba Sekarang"
             className="mt-6 lg:mt-0 lg:ml-8"
@@ -36,7 +41,9 @@ const TryValast = () => {
         </div>
       </div>
       <div className=" relative ">
-        <div className="max-w-7xl p-8 bg-[#3C80F2] mx-auto rounded-2xl flex flex-col lg:flex-row items-center justify-center lg:justify-between">
+        <div
+          data-aos="fade-up"
+          className="max-w-7xl p-8 bg-[#3C80F2] mx-auto rounded-2xl flex flex-col lg:flex-row items-center justify-center lg:justify-between">
           <img
             src={HeaderLeft}
             className="absolute -left-0 2xl:left-60 top-0 hidden lg:block"
