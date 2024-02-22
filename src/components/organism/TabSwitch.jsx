@@ -59,7 +59,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon1', 35)}>
               <img src={Icon1} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Analisa Perkembangan Bisnismu
+                Kemudahan Mengelola Transaksi
               </p>
             </div>
             <div
@@ -67,7 +67,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon2', 70)}>
               <img src={Icon2} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Kenali Pelangganmu
+                Kenali Pelangganmu dengan KYC
               </p>
             </div>
             <div
@@ -75,7 +75,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon3', 100)}>
               <img src={Icon3} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Kenali Pelangganmu
+                Berbagai Pilihan Pembayaran
               </p>
             </div>
           </div>

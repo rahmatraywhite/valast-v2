@@ -35,8 +35,8 @@ const Colab = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-center gap-6 my-8 lg:my-16">
         <CardHome
-          title="Diawasi Oleh Bank Indonesia"
-          text="Valast telah terdaftar dan diawasi oleh Bank Indonesia"
+          title="Standart Laporan KUPVA"
+          text="Valast telah mengacu pada format laporan Bank Indonesia"
           img={Sertif1}
         />
         <CardHome
