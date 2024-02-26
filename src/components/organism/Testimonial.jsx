@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CardTestimonial from '../atoms/CardTestimonial';
 import Testi1 from '../../assets/images/testi1.png';
 import Testi2 from '../../assets/images/testi2.png';
 import Testi3 from '../../assets/images/testi3.png';
+import { LanguageContext } from '../../utils/LanguageContext';
 
 const Testimonial = () => {
+  const { t } = useContext(LanguageContext);
   return (
     <div className="flex flex-col justify-center mx-auto items-center max-w-7xl p-4">
       <h1 className="text-center text-[38px] text-[#1D2939] font-extrabold leading-[52px]">
-        Apa Kata Mereka Tentang Kami?
+        {t('Apa Kata Mereka Tentang Kami?')}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
         <CardTestimonial

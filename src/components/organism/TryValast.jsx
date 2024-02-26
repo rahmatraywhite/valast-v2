@@ -1,12 +1,14 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import Button from '../atoms/Button';
 import Custry from '../../assets/images/custry.png';
 import Valas2 from '../../assets/icons/valas2.svg';
 import HeaderRight from '../../assets/images/header right.png';
 import HeaderLeft from '../../assets/images/melengkung.svg';
+import { LanguageContext } from '../../utils/LanguageContext';
 import Aos from 'aos';
 
 const TryValast = () => {
+  const { t } = useContext(LanguageContext);
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
@@ -22,15 +24,17 @@ const TryValast = () => {
             data-aos="fade-right"
             className="text-center max-w-[617px] lg:text-left">
             <p className="text-[#1D2939] font-extrabold text-[28px] lg:text-[38px] leading-[36px] lg:leading-[52px]">
-              Kamu Mempunyai Kesulitan Saat Menggunakan Valast?
+              {t('Kamu Mempunyai Kesulitan Saat Menggunakan Valast?')}
             </p>
             <p className="text-[#475467] mt-4 text-lg lg:text-xl leading-6">
-              Dapatkan Informasi lebih lengkap tentang Valast
+              {t('Dapatkan Informasi lebih lengkap tentang Valast')}
             </p>
             <div className="flex flex-col lg:flex-row items-center mt-8 gap-3">
-              <Button className="bg-[#3C80F2] text-white">Jalankan Demo</Button>
+              <Button className="bg-[#3C80F2] capitalize text-white">
+                {t('Jalankan Demo')}
+              </Button>
               <Button className="bg-[#fff] border border-[#EAECF0] text-primary">
-                Hubungi Kami
+                {t('Hubungi Kami')}
               </Button>
             </div>
           </div>
@@ -58,14 +62,14 @@ const TryValast = () => {
               className="mx-auto w-[118px] h-[23.7px] lg:mx-0"
             />
             <p className="text-white text-[22px] lg:text-[42px] font-bold mt-4 lg:mt-[81px] leading-[26px] lg:leading-[52px]">
-              Kelola Semua Urusan Bisnis Menggunakan Valast{' '}
+              {t('Kelola Semua Urusan Bisnis Menggunakan Valast')}{' '}
             </p>
             <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start mt-6 lg:mt-8 gap-3">
-              <Button className="bg-[#fff] text-primary">
-                Coba Gratis 30 Hari
+              <Button className="bg-[#fff] border duration-300 ease-in-out text-primary">
+                {t('Coba Gratis 30 Hari')}
               </Button>
-              <Button className="bg-transparent border border-[#fff] text-white">
-                Coba Sekarang
+              <Button className="bg-transparent border z-10  hover:border-2 duration-300 ease-in-out border-[#fff] text-white">
+                {t('Set Demo')}
               </Button>
             </div>
           </div>
