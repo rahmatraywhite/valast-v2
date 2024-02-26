@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Button from '../atoms/Button';
 import HeaderImg from '../../assets/images/header right.png';
 import HeaderLeft from '../../assets/images/header left.svg';
 import Aos from 'aos';
+import { LanguageContext } from '../../utils/LanguageContext';
 
 const Header = () => {
+  const { t } = useContext(LanguageContext);
+
   useEffect(() => {
     Aos.init();
   });
@@ -17,19 +20,23 @@ const Header = () => {
           data-aos-duration="1500"
           className="w-full md:w-1/2 flex flex-col justify-center md:mr-5">
           <h1 className="text-[#1D2939] font-extrabold leading-8 md:leading-[64px] text-2xl md:text-[45px]">
-            Aplikasi Money Changer Online Lengkap Untuk Mempercepat Bisnis Anda
+            {t(
+              'Aplikasi Money Changer Online Lengkap Untuk Mempercepat Bisnis Anda'
+            )}
           </h1>
           <p className="text-[#475467] mt-2 text-sm md:text-base leading-6">
-            Kelola operasional Money Changer anda menggunakan solusi lengkap
-            dalam meningkatkan pelayanan menjadi lebih cepat dan modern
+            {t(
+              'Kelola operasional Money Changer anda menggunakan solusi lengkap dalam meningkatkan pelayanan menjadi lebih cepat dan modern'
+            )}
           </p>
           <div className="flex mt-5 items-center space-x-3">
-            <Button className={`bg-primary text-white font-semibold text-sm`}>
-              Coba Gratis 30 Hari
+            <Button
+              className={`bg-primary hover:bg-white border hover:text-primary hover:border-primary duration-300 ease-in-out text-white font-semibold text-sm`}>
+              {t('Coba Gratis 30 Hari')}
             </Button>
             <Button
-              className={`bg-white border border-[#EAECF0] text-primary font-semibold text-sm`}>
-              Jadwalkan Demo
+              className={`bg-white border hover:bg-primary hover:text-[#fff] duration-300 ease-in-out border-[#EAECF0] text-primary font-semibold text-sm`}>
+              {t('Jadwalkan Demo')}
             </Button>
           </div>
         </div>
