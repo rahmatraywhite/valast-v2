@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Colab1 from '../../assets/images/colab1.png';
 import Colab2 from '../../assets/images/colab2.png';
 import Colab3 from '../../assets/images/colab3.png';
@@ -9,8 +9,10 @@ import Sertif2 from '../../assets/icons/sertif2.svg';
 import Sertif3 from '../../assets/icons/sertif3.svg';
 import { CardHome } from '../atoms/CardHome';
 import Aos from 'aos';
+import { LanguageContext } from '../../utils/LanguageContext';
 
 const Colab = () => {
+  const { t } = useContext(LanguageContext);
   const collabImages = [Colab1, Colab2, Colab3, Colab4, Colab5];
   useEffect(() => {
     Aos.init({ duration: 1500 });
@@ -19,7 +21,7 @@ const Colab = () => {
   return (
     <div className="my-8 px-4 lg:my-16">
       <p className="text-lg text-[#475467] text-center font-medium leading-6">
-        Telah Berkolaborasi dengan:
+        {t('Telah Berkolaborasi dengan:')}
       </p>
       <div
         data-aos="fade-up"
@@ -35,18 +37,22 @@ const Colab = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-center gap-6 my-8 lg:my-16">
         <CardHome
-          title="Standart Laporan KUPVA"
-          text="Valast telah mengacu pada format laporan Bank Indonesia"
+          title={t('Standart Laporan KUPVA')}
+          text={t('Valast telah terdaftar dan diawasi oleh Bank Indonesia')}
           img={Sertif1}
         />
         <CardHome
-          title="Sertifikasi ISO 27001:2013"
-          text="Keamanan dan kerahasiaan data terjamin dengan sertifikasi ISO"
+          title={t('Sertifikasi ISO 27001:2013')}
+          text={t(
+            'Keamanan dan kerahasiaan data terjamin dengan sertifikasi ISO'
+          )}
           img={Sertif2}
         />
         <CardHome
-          title="Terdaftar PSE Kominfo"
-          text="Terdaftar sebagai sistem elektronik yang aman untuk bertransaksi"
+          title={t('Terdaftar PSE Kominfo')}
+          text={t(
+            'Terdaftar sebagai sistem elektronik yang aman untuk bertransaksi'
+          )}
           img={Sertif3}
         />
       </div>
