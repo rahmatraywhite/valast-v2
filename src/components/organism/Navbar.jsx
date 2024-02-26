@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Button from '../atoms/Button';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { MdClose } from 'react-icons/md';
-import { BsChevronDown } from 'react-icons/bs';
 import { languages, LanguageContext } from '../../utils/LanguageContext';
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -60,22 +59,22 @@ export default function Navbar() {
             }`}>
             <ul className="items-center justify-center space-y-4 lg:flex lg:space-x-[42px] lg:space-y-0">
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Home</Link>
+                <Link to={'/'}>{t('home')}</Link>
               </li>
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Tentang Kami</Link>
+                <Link to={'/'}>{t('Tentang Kami')}</Link>
               </li>
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Solusi</Link>
+                <Link to={'/'}>{t('Solusi')}</Link>
               </li>
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Klien</Link>
+                <Link to={'/'}>{t('Klien')}</Link>
               </li>
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Harga</Link>
+                <Link to={'/'}>{t('Harga')}</Link>
               </li>
               <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>Kontak</Link>
+                <Link to={'/'}>{t('Kontak')}</Link>
               </li>
             </ul>
             <div className="mt-3 flex flex-col gap-3 lg:hidden">
@@ -167,17 +166,17 @@ export default function Navbar() {
           <Link>
             <Button
               className={
-                'text-sm bg-[#fff] border hidden lg:block border-[#EAECF0] font-medium text-primary'
+                'text-sm bg-[#fff] border hidden hover:bg-primary hover:text-[#fff] duration-300 ease-in-out lg:block border-[#EAECF0] font-medium text-primary'
               }>
-              Masuk
+              {t('Masuk')}
             </Button>
           </Link>
           <Link>
             <Button
               className={
-                'text-sm hidden lg:block bg-primary font-medium text-[#fff]'
+                'text-sm hidden lg:block bg-primary hover:bg-white border hover:text-primary hover:border-primary duration-300 ease-in-out font-medium text-[#fff]'
               }>
-              Coba Gratis
+              {t('Coba Gratis')}
             </Button>
           </Link>
         </div>
