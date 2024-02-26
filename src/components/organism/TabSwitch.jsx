@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Switch1 from '../../assets/images/switch1.svg';
 import Switch2 from '../../assets/images/switch2.svg';
 import Switch3 from '../../assets/images/switch3.svg';
@@ -7,7 +7,9 @@ import Icon2 from '../../assets/icons/switch2.svg';
 import Icon3 from '../../assets/icons/switch3.svg';
 import Rounded from '../../assets/images/rounded.svg';
 import Aos from 'aos';
+import { LanguageContext } from '../../utils/LanguageContext';
 const TabSwitch = () => {
+  const { t } = useContext(LanguageContext);
   const [switchImage, setSwitchImage] = useState(Switch1);
   const [percentage, setPercentage] = useState(0);
 
@@ -38,8 +40,9 @@ const TabSwitch = () => {
   return (
     <div className="flex flex-col justify-center items-center mx-auto">
       <h1 className="text-[#1D2939] font-extrabold text-2xl lg:text-[38px] max-w-[923px] text-center lg:leading-[52px]">
-        Pilihan Tepat Dalam Pelayanan Meningkatkan Layanan Penukaran Valuta
-        Asing
+        {t(
+          'Pilihan Tepat Dalam Pelayanan Meningkatkan Layanan Penukaran Valuta Asing'
+        )}
       </h1>
       <div className="flex justify-between items-center mt-8 gap-[38px] flex-wrap">
         <div className="flex gap-[18px]">
@@ -59,7 +62,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon1', 35)}>
               <img src={Icon1} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Kemudahan Mengelola Transaksi
+                {t('Kemudahan Mengelola Transaksi')}
               </p>
             </div>
             <div
@@ -67,7 +70,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon2', 70)}>
               <img src={Icon2} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Kenali Pelangganmu dengan KYC
+                {t('Kenali Pelangganmu dengan KYC')}
               </p>
             </div>
             <div
@@ -75,7 +78,7 @@ const TabSwitch = () => {
               onMouseEnter={() => handleMouseEnter('Icon3', 100)}>
               <img src={Icon3} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
-                Berbagai Pilihan Pembayaran
+                {t('Berbagai Pilihan Pembayaran')}
               </p>
             </div>
           </div>

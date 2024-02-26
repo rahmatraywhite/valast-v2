@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import User from '../../assets/images/user-iklan.svg';
 import Aos from 'aos';
+import { LanguageContext } from '../../utils/LanguageContext';
 
 const Iklan = () => {
+  const { t } = useContext(LanguageContext);
   useEffect(() => {
     Aos.init({ duration: 1000 });
   });
@@ -13,22 +15,26 @@ const Iklan = () => {
       </div>
       <div data-aos="fade-left" className="max-w-[595px]">
         <h1 className="text-3xl md:text-[38px] text-[#1D2939] font-extrabold md:leading-[52px]">
-          Mengapa Harus Transaksi Menggunakan Valast?
+          {t('Mengapa Harus Transaksi Menggunakan Valast?')}
         </h1>
         <div className="flex flex-col gap-4 mt-14">
           <DetailIklan
-            title="Transaksi Mudah Tanpa Batas"
-            text="valast menyediakan dashboard yang akan memberikan tampilan visual dari perkembangan bisnis. Data yang disajikan aktual dan mudah dimengerti oleh pemilik bisnis"
+            title={t('Transaksi Mudah Tanpa Batas')}
+            text={t(
+              'valast menyediakan dashboard yang akan memberikan tampilan visual dari perkembangan bisnis. Data yang disajikan aktual dan mudah dimengerti oleh pemilik bisnis'
+            )}
             no="1"
           />
           <DetailIklan
-            title="Transaksi Cepat dan Aman"
-            text="Uang masuk ke rekening hanya dalam hitungan menit"
+            title={t('Transaksi Cepat dan Aman')}
+            text={t('Uang masuk ke rekening hanya dalam hitungan menit')}
             no="2"
           />
           <DetailIklan
-            title="Customer Service 24 Jam"
-            text="Ada kendala saat transaksi? Customer Service kami tersedia 24 jam untuk melayani kamu!"
+            title={t('Customer Service 24 Jam')}
+            text={t(
+              'Ada kendala saat transaksi? Customer Service kami tersedia 24 jam untuk melayani kamu!'
+            )}
             no="3"
           />
         </div>
