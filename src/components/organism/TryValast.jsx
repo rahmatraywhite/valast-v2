@@ -1,8 +1,8 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import Button from '../atoms/Button';
-import Custry from '../../assets/images/custry.png';
+import Custry from '../../assets/images/cs-image.svg';
 import Valas2 from '../../assets/icons/valas2.svg';
-import HeaderRight from '../../assets/images/header right.png';
+import HeaderRight from '../../assets/images/visual_header.svg';
 import HeaderLeft from '../../assets/images/melengkung.svg';
 import { LanguageContext } from '../../utils/LanguageContext';
 import Aos from 'aos';
@@ -52,7 +52,7 @@ const TryValast = () => {
           className="max-w-7xl p-8 bg-[#3C80F2] mx-auto rounded-2xl flex flex-col lg:flex-row items-center justify-center lg:justify-between">
           <img
             src={HeaderLeft}
-            className="absolute -left-0 2xl:left-60 top-0 hidden lg:block"
+            className="absolute -left-0 top-0 hidden lg:block"
             alt=""
           />
           <div className="text-center lg:text-left">

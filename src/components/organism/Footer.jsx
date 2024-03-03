@@ -7,6 +7,7 @@ import Ig from '../../assets/icons/ig.svg';
 import Le from '../../assets/icons/le.svg';
 import Yt from '../../assets/icons/yt.svg';
 import { LanguageContext } from '../../utils/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useContext(LanguageContext);
@@ -67,7 +68,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div
+          <Link target='_blank' to='https://wa.me/+628543234421'
             className="w-[215px] absolute right-0 2xl:right-[-80px] bottom-28 md:bottom-36 py-3 flex gap-3 items-center cursor-pointer px-4 rounded-xl"
             style={{
               background:
@@ -78,7 +79,7 @@ const Footer = () => {
               <p className="text-xl font-semibold">{t('Hubungi Kami')}</p>
               <p>{t('Online 24 Jam')}</p>
             </div>
-          </div>
+          </Link>
           <div className="flex items-center gap-6 absolute right-0 bottom-14 md:bottom-20 cursor-pointer">
             {Sosial.map((icon, index) => {
               return (

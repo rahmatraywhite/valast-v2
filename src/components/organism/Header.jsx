@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import Button from '../atoms/Button';
-import HeaderImg from '../../assets/images/header right.png';
+import HeaderImg from '../../assets/images/visual_header.svg';
 import HeaderLeft from '../../assets/images/header left.svg';
 import Aos from 'aos';
 import { LanguageContext } from '../../utils/LanguageContext';
