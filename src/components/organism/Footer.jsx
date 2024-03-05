@@ -14,7 +14,9 @@ const Footer = () => {
   const Sosial = [Fb, Tw, Ig, Le, Yt];
   return (
     <Fragment>
-      <div className="flex justify-center mt-[50px] px-4 2xl:px-0 bg-[#F2F4F7]">
+      <div
+        id="kontak"
+        className="flex justify-center mt-[50px] px-4 2xl:px-0 bg-[#F2F4F7]">
         <footer className="max-w-7xl relative py-[60px]">
           <div className="grid grid-cols-1 sm:grid-cols-2">
             <div className="text-[#475467] w-[368px]">
@@ -68,7 +70,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <Link target='_blank' to='https://wa.me/+628543234421'
+          <Link
+            target="_blank"
+            to="https://wa.me/+628543234421"
             className="w-[215px] absolute right-0 2xl:right-[-80px] bottom-28 md:bottom-36 py-3 flex gap-3 items-center cursor-pointer px-4 rounded-xl"
             style={{
               background:

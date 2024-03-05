@@ -31,6 +31,18 @@ export default function Navbar() {
     };
   }, []);
 
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const navbarHeight = document.querySelector('nav').offsetHeight;
+      const topPosition = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <nav className={`navbar ${navbarS ? 'stickys' : ''}`}>
       <div className="justify-between px-4 mx-auto py-1 lg:max-w-7xl lg:items-center lg:flex 2xl:px-0">
@@ -57,24 +69,31 @@ export default function Navbar() {
             className={`flex-1 justify-between pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
               navbar ? 'block' : 'hidden'
             }`}>
-            <ul className="items-center justify-center space-y-4 lg:flex lg:space-x-[42px] lg:space-y-0">
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('home')}</Link>
+            <ul className="items-center justify-center space-y-4 lg:flex lg:space-x-[32px] lg:space-y-0">
+              <li
+                onClick={() => handleScrollTo('home')}
+                className="text-[#475467] cursor-pointer font-medium hover:text-primary">
+                <p>{t('home')}</p>
               </li>
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('Tentang Kami')}</Link>
+              <li
+                onClick={() => handleScrollTo('tentang kami')}
+                className="text-[#475467] cursor-pointer font-medium hover:text-primary">
+                <p>{t('Tentang Kami')}</p>
               </li>
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('Solusi')}</Link>
+              <li
+                onClick={() => handleScrollTo('produk')}
+                className="text-[#475467] cursor-pointer font-medium hover:text-primary">
+                <p>{t('Produk')}</p>
               </li>
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('Klien')}</Link>
+              <li
+                onClick={() => handleScrollTo('faq')}
+                className="text-[#475467] cursor-pointer uppercase font-medium hover:text-primary">
+                <p>{t('Faq')}</p>
               </li>
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('Harga')}</Link>
-              </li>
-              <li className="text-[#475467] font-medium hover:text-primary">
-                <Link to={'/'}>{t('Kontak')}</Link>
+              <li
+                onClick={() => handleScrollTo('kontak')}
+                className="text-[#475467] cursor-pointer font-medium hover:text-primary">
+                <p>{t('Kontak')}</p>
               </li>
             </ul>
             <div className="mt-3 flex flex-col gap-3 lg:hidden">

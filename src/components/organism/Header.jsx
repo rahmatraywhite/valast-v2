@@ -12,7 +12,7 @@ const Header = () => {
     Aos.init();
   });
   return (
-    <div className="w-full py-8 md:py-[60px] bg-[#F9F9F9] md:px-2">
+    <div id="home" className="w-full py-8 md:py-[60px] bg-[#F9F9F9] md:px-2">
       <img src={HeaderLeft} className="absolute" alt="header Valast ID" />
       <div className="flex mt-3 md:my-[30px] max-w-7xl mx-auto justify-center md:justify-between p-3 md:p-0 flex-col md:flex-row md:items-center">
         <div

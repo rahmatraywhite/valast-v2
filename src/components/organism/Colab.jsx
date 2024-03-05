@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from 'react';
-import Colab1 from '../../assets/images/colab1.png';
-import Colab2 from '../../assets/images/colab2.png';
-import Colab3 from '../../assets/images/colab3.png';
-import Colab4 from '../../assets/images/colab4.png';
-import Colab5 from '../../assets/images/colab5.png';
+import Colab1 from '../../assets/images/colab1.svg';
+import Colab2 from '../../assets/images/colab2.svg';
+import Colab3 from '../../assets/images/colab3.svg';
+import Colab4 from '../../assets/images/colab4.svg';
+import Colab5 from '../../assets/images/colab5.svg';
 import Sertif1 from '../../assets/icons/sertif1.svg';
 import Sertif2 from '../../assets/icons/sertif2.svg';
 import Sertif3 from '../../assets/icons/sertif3.svg';
@@ -31,7 +31,7 @@ const Colab = () => {
             key={index}
             src={image}
             alt={`Colab ${index + 1}`}
-            className="w-32 h-32 mb-4 lg:mb-0"
+            className="w-28 h-28 mb-4 lg:mb-0"
           />
         ))}
       </div>

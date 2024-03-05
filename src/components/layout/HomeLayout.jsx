@@ -14,13 +14,13 @@ const HomeLayout = () => {
   return (
     <Fragment>
       <Navbar />
-      <div className="mx-auto flex flex-col justify-center">
+      <div className="mx-auto flex flex-col overflow-x-hidden justify-center">
         <Header />
         <Rated />
         <Colab />
         <TabSwitch />
         <Iklan />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <FaqHome />
         <TryValast />
         <Footer />

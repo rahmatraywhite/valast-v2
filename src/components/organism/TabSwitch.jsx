@@ -38,7 +38,9 @@ const TabSwitch = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto">
+    <div
+      id="produk"
+      className="flex flex-col justify-center items-center mx-auto">
       <h1 className="text-[#1D2939] font-extrabold text-2xl lg:text-[38px] max-w-[923px] text-center lg:leading-[52px]">
         {t(
           'Pilihan Tepat Dalam Pelayanan Meningkatkan Layanan Penukaran Valuta Asing'

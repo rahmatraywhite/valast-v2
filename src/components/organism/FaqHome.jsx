@@ -5,31 +5,36 @@ const FaqHome = () => {
   const { t } = useContext(LanguageContext);
   const [faqs, setFaqs] = useState([
     {
-      question:
-        'Mengapa menukar valuta asing dengan Valast lebih cepat dan biaya lebih murah?',
+      question: t('Apa itu Valast?'),
+      answer: t(
+        'Valast merupakan platform Money Changer yang memberikan kemudahan dalam mengelola transaksi dengan cepat dan mudah.'
+      ),
+    },
+    {
+      question: t('Saya tertarik menggunakan Valast, bagaimana caranya?'),
+      answer: t(
+        'Anda bisa mencoba menggunakan Valast dengan menekan tombol “Coba Gratis” dan dapatkan kemudahan melayani nasabah dalam transaksi penukaran valuta asing.'
+      ),
+    },
+    {
+      question: t('Bagaimana cara melakukan pembayaran di Valast?'),
+      answer: t(
+        'Platform Valast menyediakan 3 metode pembayaran. Mulai dari tunai, transfer antar bank, hingga pembayaran  kombinasi tunai dan transfer.'
+      ),
+    },
+    {
+      question: t(
+        'Jika terjadi kendala saat transaksi, apa yang perlu saya lakukan?'
+      ),
+      answer: t(
+        'Valast menyediakan layanan Customer Care yang bersedia membantu Anda selama 24 jam. Hubungi kami segera jika terjadi kendala saat transaksi.'
+      ),
+    },
+    {
+      question: t('Bagaimana cara berlangganan Valast?'),
       answer:
-        'Mengapa menukar valuta asing dengan Valast lebih cepat dan biaya lebih murah?',
-    },
-    {
-      question: 'Bagaimana jika transaksi gagal?',
-      answer:
-        'Anda dapat dengan mudah mengikuti perkembangan proyek dengan menjelajahi bagian Proyek-Proyek di situs kami. Di sana, Anda akan menemukan informasi rinci, pembaruan terbaru, dan visualisasi kemajuan setiap proyek.',
-    },
-    {
-      question:
-        'Bagaimana cara Money Changer bergabung sebagai merchant Valast?',
-      answer: 'Bagaimana cara Money Changer bergabung sebagai merchant Valast?',
-    },
-    {
-      question:
-        'Apa yang harus dilakukan ketika ada pertanyaan dan kendala saat transaksi?',
-      answer:
-        'Apa yang harus dilakukan ketika ada pertanyaan dan kendala saat transaksi?',
-    },
-    {
-      question:
-        'Bagaimana cara refund ketika terjadi kegagalan saat transaksi?',
-      answer: 'Bagaimana cara refund ketika terjadi kegagalan saat transaksi?',
+        t('Ada beberapa cara berlangganan yang bisa Anda pilih') +
+        t('list Pertanyaan'),
     },
   ]);
 
@@ -40,7 +45,9 @@ const FaqHome = () => {
   };
 
   return (
-    <div className="container max-w-5xl my-[60px] px-2 md:px-0 mx-auto">
+    <div
+      id="faq"
+      className="container max-w-5xl my-[60px] px-2 md:px-0 mx-auto">
       <h1 className="text-[38px] font-extrabold leading-[52px] text-[#1D2939] text-center mb-[42px]">
         {t('Punya Pertanyaan Seputar Valast?')}
       </h1>
