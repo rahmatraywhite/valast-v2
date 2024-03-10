@@ -31,7 +31,7 @@ const Colab = () => {
             key={index}
             src={image}
             alt={`Colab ${index + 1}`}
-            className="w-28 h-28 mb-4 lg:mb-0"
+            className={`w-28 mb-4 lg:mb-0 ${index === 2 ? 'h-14' : 'h-20'}`}
           />
         ))}
       </div>

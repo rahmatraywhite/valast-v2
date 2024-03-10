@@ -32,13 +32,15 @@ const Footer = () => {
               </p>
               <p className="mt-[42px] font-medium">{t('Kantor Pusat')}</p>
               <p className="leading-6 mt-3">
-                Jl. Pramuka Jaya No. 25 Purwokerto, Indonesia 27834
+                Poris Indah Blok H No 152
+                Cipondoh indah, Cipondoh
+                Kota Tangerang, Indonesia 15148
               </p>
               <p className="mt-[42px] font-medium">{t('Kontak Kami')}</p>
-              <p className="leading-6 mt-3">+62 854 - 323 - 4421</p>
-              <p className="leading-6 mt-3">Valastid@gmail.com</p>
+              <p className="leading-6 mt-3">+62 811 - 121 - 686</p>
+              <p className="leading-6 mt-3">admin@valast.id</p>
             </div>
-            <div className="flex flex-col md:flex-row items-start gap-8 md:gap-24">
+            <div className="flex flex-col md:flex-row items-start gap-8 md:gap-20">
               <div className="text-[#475467] ">
                 <p className="font-medium">{t('Fitur')}</p>
                 <p className="mt-3 leading-6">{t('Jual Valas')}</p>
@@ -60,7 +62,7 @@ const Footer = () => {
                 <p className="font-medium">{t('Gabung')}</p>
                 <p className="mt-3 leading-6">{t('Afiliasi')}</p>
                 <p className="mt-3 leading-6">{t('Karir')}</p>
-                <p className="mt-3 leading-6">{t('')}</p>
+                <p className="mt-3 leading-6">{t('Kerjasama')}</p>
               </div>
               <div className="text-[#475467]">
                 <p className="font-medium">{t('Harga')}</p>
@@ -72,7 +74,7 @@ const Footer = () => {
           </div>
           <Link
             target="_blank"
-            to="https://wa.me/+628543234421"
+            to="https://wa.me/+62811121686"
             className="w-[215px] absolute right-0 2xl:right-[-80px] bottom-28 md:bottom-36 py-3 flex gap-3 items-center cursor-pointer px-4 rounded-xl"
             style={{
               background:

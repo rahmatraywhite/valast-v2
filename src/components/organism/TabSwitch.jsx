@@ -8,13 +8,16 @@ import Icon3 from '../../assets/icons/switch3.svg';
 import Rounded from '../../assets/images/rounded.svg';
 import Aos from 'aos';
 import { LanguageContext } from '../../utils/LanguageContext';
+
 const TabSwitch = () => {
   const { t } = useContext(LanguageContext);
   const [switchImage, setSwitchImage] = useState(Switch1);
   const [percentage, setPercentage] = useState(0);
+  const [imageAnimation, setImageAnimation] = useState('fade-in');
 
   const handleMouseEnter = (image, percentage) => {
     setPercentage(percentage);
+    setImageAnimation('fade-out');
     switch (image) {
       case 'Icon1':
         setSwitchImage(Switch1);
@@ -30,6 +33,10 @@ const TabSwitch = () => {
     }
   };
 
+  const handleMouseLeave = () => {
+    setImageAnimation('fade-in');
+  };
+
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -38,9 +45,7 @@ const TabSwitch = () => {
   }, []);
 
   return (
-    <div
-      id="produk"
-      className="flex flex-col justify-center items-center mx-auto">
+    <div id="produk" className="flex flex-col justify-center items-center mx-auto">
       <h1 className="text-[#1D2939] font-extrabold text-2xl lg:text-[38px] max-w-[923px] text-center lg:leading-[52px]">
         {t(
           'Pilihan Tepat Dalam Pelayanan Meningkatkan Layanan Penukaran Valuta Asing'
@@ -55,30 +60,46 @@ const TabSwitch = () => {
                 style={{
                   height: `${percentage}%`,
                   transition: 'height 0.3s',
-                }}></div>
+                }}
+              ></div>
             </div>
           </div>
           <div data-aos="fade-right" className="flex-col space-y-4">
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
-              onMouseEnter={() => handleMouseEnter('Icon1', 35)}>
-              <img src={Icon1} alt="" />
+              onMouseEnter={() => handleMouseEnter('Icon1', 35)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={Icon1}
+                alt=""
+              />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Kemudahan Mengelola Transaksi')}
               </p>
             </div>
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
-              onMouseEnter={() => handleMouseEnter('Icon2', 70)}>
-              <img src={Icon2} alt="" />
+              onMouseEnter={() => handleMouseEnter('Icon2', 70)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={Icon2}
+                alt=""
+              />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Kenali Pelangganmu dengan KYC')}
               </p>
             </div>
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
-              onMouseEnter={() => handleMouseEnter('Icon3', 100)}>
-              <img src={Icon3} alt="" />
+              onMouseEnter={() => handleMouseEnter('Icon3', 100)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={Icon3}
+                alt=""
+              />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Berbagai Pilihan Pembayaran')}
               </p>
@@ -88,13 +109,19 @@ const TabSwitch = () => {
         <div className="relative" data-aos="fade-left">
           <img
             src={Rounded}
-            className="absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px]"
+            data-aos={imageAnimation === 'fade-in' ? '' : 'fade-in'}
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            className={`absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px] ${imageAnimation === 'fade-in' ? '' : 'fade-in'}`}
             alt=""
           />
           <img
             src={switchImage}
             alt={switchImage}
-            className="duration-300 rounded-3xl ease-in-out z-10"
+            className={`duration-300 rounded-3xl ease-in-out z-10 ${imageAnimation === 'fade-in' ? '' : 'fade-in'}`}
+            data-aos={imageAnimation === 'fade-in' ? '' : 'fade-in'}
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
           />
         </div>
       </div>
