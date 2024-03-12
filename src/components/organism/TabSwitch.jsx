@@ -33,7 +33,7 @@ const TabSwitch = () => {
     }
     setTimeout(() => {
       setImageAnimation('fade-out');
-    }, 800);
+    }, 300);
   };
 
   const handleMouseLeave = () => {
@@ -101,22 +101,13 @@ const TabSwitch = () => {
         <div className="relative" data-aos="fade-left">
           <img
             src={Rounded}
-            data-aos={imageAnimation === 'fade-out' ? '' : 'fade-in'}
-            // data-aos-duration="200"
-            // data-aos-easing="ease-out"
-            className={`absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px] ${
-              imageAnimation === 'fade-out' ? '' : 'fade-in'
-            }`}
+            className={`absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px]`}
             alt=""
           />
           <img
             src={switchImage}
             alt={switchImage}
-            className={`duration-300 rounded-3xl ease-in-out z-10 ${
-              imageAnimation === 'fade-out' ? '' : 'fade-in'
-            }`}
-            data-aos={imageAnimation === 'fade-out' ? '' : 'fade-in'}
-            // data-aos-duration="200"
+            className={`duration-300 rounded-3xl ease-in-out z-10`}
             data-aos-easing="ease-in-out"
           />
         </div>

@@ -1,42 +1,46 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { LanguageContext } from '../../utils/LanguageContext';
 
 const FaqHome = () => {
-  const { t } = useContext(LanguageContext);
-  const [faqs, setFaqs] = useState([
-    {
-      question: t('Apa itu Valast?'),
-      answer: t(
-        'Valast merupakan platform Money Changer yang memberikan kemudahan dalam mengelola transaksi dengan cepat dan mudah.'
-      ),
-    },
-    {
-      question: t('Saya tertarik menggunakan Valast, bagaimana caranya?'),
-      answer: t(
-        'Anda bisa mencoba menggunakan Valast dengan menekan tombol “Coba Gratis” dan dapatkan kemudahan melayani nasabah dalam transaksi penukaran valuta asing.'
-      ),
-    },
-    {
-      question: t('Bagaimana cara melakukan pembayaran di Valast?'),
-      answer: t(
-        'Platform Valast menyediakan 3 metode pembayaran. Mulai dari tunai, transfer antar bank, hingga pembayaran  kombinasi tunai dan transfer.'
-      ),
-    },
-    {
-      question: t(
-        'Jika terjadi kendala saat transaksi, apa yang perlu saya lakukan?'
-      ),
-      answer: t(
-        'Valast menyediakan layanan Customer Care yang bersedia membantu Anda selama 24 jam. Hubungi kami segera jika terjadi kendala saat transaksi.'
-      ),
-    },
-    {
-      question: t('Bagaimana cara berlangganan Valast?'),
-      answer:
-        t('Ada beberapa cara berlangganan yang bisa Anda pilih') +
-        t('list Pertanyaan'),
-    },
-  ]);
+  const { t, language } = useContext(LanguageContext);
+  const [faqs, setFaqs] = useState([]);
+
+  useEffect(() => {
+    setFaqs([
+      {
+        question: t('Apa itu Valast?'),
+        answer: t(
+          'Valast merupakan platform Money Changer yang memberikan kemudahan dalam mengelola transaksi dengan cepat dan mudah.'
+        ),
+      },
+      {
+        question: t('Saya tertarik menggunakan Valast, bagaimana caranya?'),
+        answer: t(
+          'Anda bisa mencoba menggunakan Valast dengan menekan tombol “Coba Gratis” dan dapatkan kemudahan melayani nasabah dalam transaksi penukaran valuta asing.'
+        ),
+      },
+      {
+        question: t('Bagaimana cara melakukan pembayaran di Valast?'),
+        answer: t(
+          'Platform Valast menyediakan 3 metode pembayaran. Mulai dari tunai, transfer antar bank, hingga pembayaran  kombinasi tunai dan transfer.'
+        ),
+      },
+      {
+        question: t(
+          'Jika terjadi kendala saat transaksi, apa yang perlu saya lakukan?'
+        ),
+        answer: t(
+          'Valast menyediakan layanan Customer Care yang bersedia membantu Anda selama 24 jam. Hubungi kami segera jika terjadi kendala saat transaksi.'
+        ),
+      },
+      {
+        question: t('Bagaimana cara berlangganan Valast?'),
+        answer:
+          t('Ada beberapa cara berlangganan yang bisa Anda pilih') +
+          t('list Pertanyaan'),
+      },
+    ]);
+  }, [language]);
 
   const toggleFAQ = (index) => {
     const updatedFaqs = [...faqs];
