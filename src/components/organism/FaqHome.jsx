@@ -68,7 +68,7 @@ const FaqHome = () => {
             <span className="">{faq.isOpen ? '-' : '+'}</span>
           </div>
           {faq.isOpen && (
-            <p className="mt-2 bg-slate-200 rounded-md py-2 px-7">
+            <p className="mt-2 bg-slate-50 rounded-md py-2 px-7">
               {faq.answer}
             </p>
           )}
