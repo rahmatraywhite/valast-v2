@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import Button from '../atoms/Button';
+import { Link } from 'react-router-dom';
 import Custry from '../../assets/images/cs-image.svg';
 import Valas2 from '../../assets/icons/valas2.svg';
 import HeaderRight from '../../assets/images/visual_header.svg';
@@ -33,9 +34,11 @@ const TryValast = () => {
               <Button className="bg-[#3C80F2] capitalize text-white">
                 {t('Jalankan Demo')}
               </Button>
-              <Button className="bg-[#fff] border border-[#EAECF0] text-primary">
-                {t('Hubungi Kami')}
-              </Button>
+              <Link target="_blank" to="https://wa.me/+62811121686">
+                <Button className="bg-[#fff] border border-[#EAECF0] text-primary">
+                  {t('Hubungi Kami')}
+                </Button>
+              </Link>
             </div>
           </div>
           <img

@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../atoms/Button';
 import HeaderImg from '../../assets/images/visual_header.svg';
 import HeaderLeft from '../../assets/images/header left.svg';
@@ -30,14 +31,18 @@ const Header = () => {
             )}
           </p>
           <div className="flex mt-5 items-center space-x-3">
-            <Button
-              className={`bg-primary hover:bg-white border hover:text-primary hover:border-primary duration-300 ease-in-out text-white font-semibold text-sm`}>
-              {t('Coba Gratis 30 Hari')}
-            </Button>
-            <Button
-              className={`bg-white border hover:bg-primary hover:text-[#fff] duration-300 ease-in-out border-[#EAECF0] text-primary font-semibold text-sm`}>
-              {t('Jadwalkan Demo')}
-            </Button>
+            <Link to="http://dashboard.valast.id/auth/register">
+              <Button
+                className={`bg-primary hover:bg-white border hover:text-primary hover:border-primary duration-300 ease-in-out text-white font-semibold text-sm`}>
+                {t('Coba Gratis 30 Hari')}
+              </Button>
+            </Link>
+            <Link to="https://wa.me/+62811121686" target="_blank">
+              <Button
+                className={`bg-white border hover:bg-primary hover:text-[#fff] duration-300 ease-in-out border-[#EAECF0] text-primary font-semibold text-sm`}>
+                {t('Jadwalkan Demo')}
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center mt-6 md:justify-end md:mt-0">

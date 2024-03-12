@@ -17,7 +17,7 @@ const TabSwitch = () => {
 
   const handleMouseEnter = (image, percentage) => {
     setPercentage(percentage);
-    setImageAnimation('fade-out');
+    setImageAnimation('fade-in');
     switch (image) {
       case 'Icon1':
         setSwitchImage(Switch1);
@@ -31,10 +31,13 @@ const TabSwitch = () => {
       default:
         break;
     }
+    setTimeout(() => {
+      setImageAnimation('fade-out');
+    }, 800);
   };
 
   const handleMouseLeave = () => {
-    setImageAnimation('fade-in');
+    setImageAnimation('fade-out');
   };
 
   useEffect(() => {
@@ -45,7 +48,9 @@ const TabSwitch = () => {
   }, []);
 
   return (
-    <div id="produk" className="flex flex-col justify-center items-center mx-auto">
+    <div
+      id="produk"
+      className="flex flex-col justify-center items-center mx-auto">
       <h1 className="text-[#1D2939] font-extrabold text-2xl lg:text-[38px] max-w-[923px] text-center lg:leading-[52px]">
         {t(
           'Pilihan Tepat Dalam Pelayanan Meningkatkan Layanan Penukaran Valuta Asing'
@@ -56,24 +61,19 @@ const TabSwitch = () => {
           <div className="relative">
             <div className="h-[320px] rounded-3xl bg-[#F2F4F7] w-3">
               <div
-                className=" bg-blue-500 bottom h-[320px] rounded-3xl"
+                className="bg-blue-500 bottom h-[320px] rounded-3xl"
                 style={{
                   height: `${percentage}%`,
                   transition: 'height 0.3s',
-                }}
-              ></div>
+                }}></div>
             </div>
           </div>
           <div data-aos="fade-right" className="flex-col space-y-4">
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
               onMouseEnter={() => handleMouseEnter('Icon1', 35)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <img
-                src={Icon1}
-                alt=""
-              />
+              onMouseLeave={handleMouseLeave}>
+              <img src={Icon1} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Kemudahan Mengelola Transaksi')}
               </p>
@@ -81,12 +81,8 @@ const TabSwitch = () => {
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
               onMouseEnter={() => handleMouseEnter('Icon2', 70)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <img
-                src={Icon2}
-                alt=""
-              />
+              onMouseLeave={handleMouseLeave}>
+              <img src={Icon2} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Kenali Pelangganmu dengan KYC')}
               </p>
@@ -94,12 +90,8 @@ const TabSwitch = () => {
             <div
               className="flex items-center border border-[#EAECF0] p-6 rounded-xl cursor-pointer space-x-4"
               onMouseEnter={() => handleMouseEnter('Icon3', 100)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <img
-                src={Icon3}
-                alt=""
-              />
+              onMouseLeave={handleMouseLeave}>
+              <img src={Icon3} alt="" />
               <p className="text-[#1D2939] font-semibold text-base lg:text-[24px]">
                 {t('Berbagai Pilihan Pembayaran')}
               </p>
@@ -109,18 +101,22 @@ const TabSwitch = () => {
         <div className="relative" data-aos="fade-left">
           <img
             src={Rounded}
-            data-aos={imageAnimation === 'fade-in' ? '' : 'fade-in'}
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out"
-            className={`absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px] ${imageAnimation === 'fade-in' ? '' : 'fade-in'}`}
+            data-aos={imageAnimation === 'fade-out' ? '' : 'fade-in'}
+            // data-aos-duration="200"
+            // data-aos-easing="ease-out"
+            className={`absolute w-56 md:w-[392px] z-[-1] right-[56px] top-[-30px] ${
+              imageAnimation === 'fade-out' ? '' : 'fade-in'
+            }`}
             alt=""
           />
           <img
             src={switchImage}
             alt={switchImage}
-            className={`duration-300 rounded-3xl ease-in-out z-10 ${imageAnimation === 'fade-in' ? '' : 'fade-in'}`}
-            data-aos={imageAnimation === 'fade-in' ? '' : 'fade-in'}
-            data-aos-duration="500"
+            className={`duration-300 rounded-3xl ease-in-out z-10 ${
+              imageAnimation === 'fade-out' ? '' : 'fade-in'
+            }`}
+            data-aos={imageAnimation === 'fade-out' ? '' : 'fade-in'}
+            // data-aos-duration="200"
             data-aos-easing="ease-in-out"
           />
         </div>

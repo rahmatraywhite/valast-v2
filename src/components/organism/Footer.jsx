@@ -11,7 +11,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useContext(LanguageContext);
-  const Sosial = [Fb, Tw, Ig, Le, Yt];
+  const Sosial = [
+    { icon: Fb, link: 'https://www.facebook.com/valast.indonesia' },
+    { icon: Tw, link: 'https://twitter.com/valast.indonesia' },
+    { icon: Ig, link: 'https://www.instagram.com/valast.indonesia' },
+    { icon: Le, link: 'https://www.linkedin.com/in/valast.indonesia' },
+    { icon: Yt, link: 'https://www.youtube.com/valast.indonesia' },
+  ];
   return (
     <Fragment>
       <div
@@ -32,9 +38,8 @@ const Footer = () => {
               </p>
               <p className="mt-[42px] font-medium">{t('Kantor Pusat')}</p>
               <p className="leading-6 mt-3">
-                Poris Indah Blok H No 152
-                Cipondoh indah, Cipondoh
-                Kota Tangerang, Indonesia 15148
+                Poris Indah Blok H No 152 Cipondoh indah, Cipondoh Kota
+                Tangerang, Indonesia 15148
               </p>
               <p className="mt-[42px] font-medium">{t('Kontak Kami')}</p>
               <p className="leading-6 mt-3">+62 811 - 121 - 686</p>
@@ -87,16 +92,19 @@ const Footer = () => {
             </div>
           </Link>
           <div className="flex items-center gap-6 absolute right-0 bottom-14 md:bottom-20 cursor-pointer">
-            {Sosial.map((icon, index) => {
-              return (
+            {Sosial.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer">
                 <img
-                  key={index}
                   className="cursor-pointer"
-                  src={icon}
+                  src={item.icon}
                   alt="Sosial Media"
                 />
-              );
-            })}
+              </a>
+            ))}
           </div>
         </footer>
       </div>

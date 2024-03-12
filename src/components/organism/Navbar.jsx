@@ -128,7 +128,7 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              <Link>
+              <Link to="http://dashboard.valast.id/auth/login">
                 <Button
                   className={
                     'text-sm w-full bg-[#fff] border border-[#EAECF0] font-medium text-primary'
@@ -136,7 +136,7 @@ export default function Navbar() {
                   Masuk
                 </Button>
               </Link>
-              <Link>
+              <Link to="http://dashboard.valast.id/auth/register">
                 <Button
                   className={
                     'text-sm w-full bg-primary font-medium text-[#fff]'
@@ -182,7 +182,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden lg:block border-l-[3px] mx-4 border-[#EAECF0] h-8"></div>
-          <Link>
+          <Link to="http://dashboard.valast.id/auth/login">
             <Button
               className={
                 'text-sm bg-[#fff] border hidden hover:bg-primary hover:text-[#fff] duration-300 ease-in-out lg:block border-[#EAECF0] font-medium text-primary'
@@ -190,7 +190,7 @@ export default function Navbar() {
               {t('Masuk')}
             </Button>
           </Link>
-          <Link>
+          <Link to="http://dashboard.valast.id/auth/register">
             <Button
               className={
                 'text-sm hidden lg:block bg-primary hover:bg-white border hover:text-primary hover:border-primary duration-300 ease-in-out font-medium text-[#fff]'
