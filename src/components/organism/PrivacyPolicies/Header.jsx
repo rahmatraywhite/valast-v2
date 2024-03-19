@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import HeaderImg from '../../../assets/images/right-term.svg';
+import HeaderImg from '../../../assets/images/privacy-right.svg';
 import HeaderLeft from '../../../assets/images/header-term.svg';
 import Aos from 'aos';
 import { LanguageContext } from '../../../utils/LanguageContext';
