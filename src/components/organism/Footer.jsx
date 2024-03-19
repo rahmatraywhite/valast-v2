@@ -113,9 +113,11 @@ const Footer = () => {
           <p className="text-[#475467] text-base text-center sm:text-left md:text-lg leading-[22px] mb-4 sm:mb-0">
             &copy; Valast.com 2024, All right reserved
           </p>
-          <div className="flex gap-6 text-[#475467] mx-auto md:mx-0 text-base md:text-xl">
-            <p>{t('Syarat dan Ketentuan')}</p>
-            <p>{t('Kebijakan Privasi')}</p>
+          <div
+            onClick={() => window.scrollTo(0, 0)}
+            className="flex gap-6 text-[#475467] mx-auto md:mx-0 text-base md:text-xl">
+            <Link to="/term-condition">{t('Syarat dan Ketentuan')}</Link>
+            <Link to="/privacy-policy">{t('Kebijakan Privasi')}</Link>
           </div>
         </footer>
       </div>
